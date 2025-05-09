@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+   background-color: yellowgreen;
+  }
+  p {
+    font-style: italic;
+  }
+  
+  nav a {
+    color: black;
+    text-decoration: none;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 1rem;
+    position: relative;
+  }
+  
+  .navbar .logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  /* Kebab icon */
+  .menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  /* Navigation links */
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 1rem;
+      background: #333;
+      padding: 1rem;
+      border-radius: 8px;
+      z-index: 1000;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
+    .nav-links li {
+      margin: 0.5rem 0;
+    }
+  }
+  
+  
+  .hero {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+    }
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  
+  .product-card {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    transition: box-shadow 0.3s;
+    background: #fff;
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product-card h3 {
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .product-card p {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .product-card button,
+  .product-card .btn {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .product-card button:hover,
+  .product-card .btn:hover {
+    background-color: #008080b8;
+  }
+  
+  .product-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .product-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+    align-items: center;
+  }
+  
+  .product-detail img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .product-detail div {
+    flex: 1;
+  }
+  
+  .product-detail h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .product-detail button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    background: teal;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  #cart-items {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f4f4f4;
+    border-radius: 8px;
+  }
+  
+  #cart-items div {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #cart-items p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
